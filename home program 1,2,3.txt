@@ -1,0 +1,81 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3, num4, num5;
+    int sum, sumSquares;
+    
+    printf("Enter five numbers: ");
+    scanf("%d %d %d %d %d", &num1, &num2, &num3, &num4, &num5);
+    
+    sum = num1 + num2 + num3 + num4 + num5;
+    sumSquares = (num1 * num1) + (num2 * num2) + (num3 * num3) + (num4 * num4) + (num5 * num5);
+    
+    printf("Sum of the numbers: %d\n", sum);
+    printf("Sum of the squares: %d\n", sumSquares);
+    
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    int startReading, endReading;
+    int units, bill;
+    
+    printf("Enter the starting meter reading: ");
+    scanf("%d", &startReading);
+    
+    printf("Enter the ending meter reading: ");
+    scanf("%d", &endReading);
+    
+    units = endReading - startReading;
+    
+    if(units <= 100) {
+        bill = units * 3.50;
+    }
+    else if(units <= 500) {
+        bill = 100 * 3.50 + (units - 100) * 2.50;
+    }
+    else {
+        bill = 100 * 3.50 + 400 * 2.50 + (units - 500) * 3.00;
+    }
+    
+    printf("Number of units consumed: %d\n", units);
+    printf("Bill amount: %d\n", bill);
+    
+    return 0;
+}
+
+
+c
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3, num4, num5;
+    
+    printf("Enter five numbers: ");
+    scanf("%d %d %d %d %d", &num1, &num2, &num3, &num4, &num5);
+    
+    int smallest = num1;
+    
+    if (num2 < smallest) {
+        smallest = num2;
+    }
+    
+    if (num3 < smallest) {
+        smallest = num3;
+    }
+    
+    if (num4 < smallest) {
+        smallest = num4;
+    }
+    
+    if (num5 < smallest) {
+        smallest = num5;
+    }
+    
+    printf("The smallest number is: %d\n", smallest);
+    
+    return 0;
+}
